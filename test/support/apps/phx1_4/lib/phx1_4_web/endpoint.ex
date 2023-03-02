@@ -1,9 +1,10 @@
 defmodule Phx14Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :phx1_4
 
-  socket "/socket", Phx14Web.UserSocket,
+  socket("/socket", Phx14Web.UserSocket,
     websocket: true,
     longpoll: false
+  )
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -18,7 +19,7 @@ defmodule Phx14Web.Endpoint do
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
-    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
+    socket("/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket)
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
   end

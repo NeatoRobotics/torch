@@ -10,11 +10,12 @@ defmodule Phx15Web.Endpoint do
     signing_salt: "LI9ono2V"
   ]
 
-  socket "/socket", Phx15Web.UserSocket,
+  socket("/socket", Phx15Web.UserSocket,
     websocket: true,
     longpoll: false
+  )
 
-  socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
+  socket("/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]])
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -29,7 +30,7 @@ defmodule Phx15Web.Endpoint do
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
-    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
+    socket("/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket)
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
     plug Phoenix.Ecto.CheckRepoStatus, otp_app: :phx1_5

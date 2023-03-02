@@ -11,7 +11,7 @@ defmodule Example.Application do
       # Start the Ecto repository
       Example.Repo,
       # Start the endpoint when the application starts
-      ExampleWeb.Endpoint,
+      ExampleWeb.Endpoint
       # Starts a worker by calling: Example.Worker.start_link(arg)
       # {Example.Worker, arg},
     ]
